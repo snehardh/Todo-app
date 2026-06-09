@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>My Tasks</h1>
+      <p class="subtitle">Stay organized, get things done</p>
+    </header>
+
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="What do you need to do?" autocomplete="off">
+      <select id="prioritySelect">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <span class="task-count" id="taskCount">0 tasks</span>
+    </div>
+
+    <ul class="task-list" id="taskList"></ul>
+
+    <div class="empty-state" id="emptyState">
+      <span class="empty-icon">&#128203;</span>
+      <p>No tasks yet. Add one above!</p>
+    </div>
+
+    <div class="footer-actions">
+      <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
